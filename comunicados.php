@@ -1,30 +1,39 @@
-<?php require "includes/cabecalho.php" ?>
+<?php 
 
-<article class="noticias limitador">
+require "inc/cabecalho.php";
+require "inc/funcoes-posts.php";
+
+$posts = lerTodosOsPosts($conexao);
+
+?>
+
+<div class="noticias limitador">
+  <!-- INÍCIO ROW -->  
+
+  
+  <?php foreach( $posts as $post ) { ?>
+  <!-- INÍCIO Card -->
+  <div>
+    
+  
+    <article class="noticias limitador">
+   
+      <a href="post-detalhe.php?id=<?=$post['id']?>"> <!-- colocamos o ID na URL para puxar a noticia (id) em que clicar -->
+        <img class="imgp" src="imagens/<?=$post['imagem']?>" alt="Imagem de destaque do post">
+        <div>
+          <h5><?=$post['titulo']?></h5>
+          <p><?=$post['resumo']?></p>
+        </div>
+      </a>
+    
+    </article>
+  </div>
+  <!-- FIM Card -->
+  <?php } ?>
 
 
 
-    <h3>Comunicados importantes</h3>
-
-      <p>Ea possimus aut facilis incidunt natus dolorem accusantium impedit expedita cupiditate voluptatum doloremque, sint esse voluptatem voluptate quasi fugit minus eos. Perspiciatis, excepturi ipsam fuga asperiores ducimus dolores quam. Tempore!</p>
-
-    <section class="bnot">
-
-            <div class="not-comunicados">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, ea. Soluta omnis nulla molestiae pariatur.</p>
-                
-            </div>
-
-       
-      
-    </section>
+</div> <!-- FIM ROW -->
 
 
-</article>
-
-
-<h4>Seu apoio é muito importante para esse projeto acontecer.<a href="contatoinscricoes.php"> Clique aqui para nos apoiar.</a></h4>
-
-
-
-<?php require "includes/rodape.php" ?>
+<?php require "inc/rodape.php" ?>

@@ -1,4 +1,4 @@
-<?php require "includes/cabecalho.php" ?>
+<?php require "inc/cabecalho.php" ?>
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
@@ -91,4 +91,4 @@
 
 
 
-<?php require "includes/rodape.php" ?>
+<?php require "inc/rodape.php" ?>
