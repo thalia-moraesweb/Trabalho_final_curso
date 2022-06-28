@@ -153,6 +153,7 @@ a {
     background-size: cover;
     overflow: hidden;
     box-shadow: 1px 1px 10px black;
+
 }
 
 .carro:after {
@@ -349,7 +350,7 @@ h3 {
 
 .imgp img {
     width: 300px;
-    border-radius: 10px;
+    border-radius: 25px;  /* alteração na borda */
 }
 
 .not {
@@ -370,9 +371,9 @@ h3 {
 }
 
 .not img:hover {
-    filter: grayscale(0);
-    transform: scale(1.4);
-}
+    filter: grayscale(0.1);
+    transform: scale(1.2);
+} /* alteraçao na animação dos instrumentos */
 
 h4 {
     text-align: center;
@@ -381,13 +382,15 @@ h4 {
 }
 
 h4 a {
-    color: rgb(255, 153, 0);
+    color: rgb(61, 50, 33);  /* Mudança de cor para melhor visualização da tecla (clique aqui) */
 }
 
-@media screen and (min-width: 500px) {
+
+@media screen and (min-width: 450px) {
     .imgp img {
         width: 450px;
     }
+
 
     .not {
         width: 450px;
